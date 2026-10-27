@@ -1,0 +1,3879 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f5f7fb;
+   min-height: 100vh;
+}
+h1 {
+    color: #0d6efd;
+    text-align: center;
+    font-size: 40px;
+}
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-top: 20px;
+}
+p {
+    text-align: center;
+    color: #666;
+    font-size: 17px;
+    margin-top: 10px;
+}
+button {
+    display: block;
+    margin: 25px auto;
+    padding: 12px 30px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d6efd;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #222;
+}
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0d6efd;
+}
+.login-btn {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #0b5ed7;
+}
+.hero {
+    min-height: 450px;
+    background: linear-gradient(135deg, #0d6efd, #4dabf7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+.hero-content h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.hero-content p {
+    color: white;
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+.hero-btn {
+    background-color: white;
+    color: #0d6efd;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-2px);
+}
+/* LOGIN PAGE */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f7fb;
+}
+
+.login-box {
+    width: 400px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+.login-logo span {
+    color: #222;
+}
+
+.login-box h1 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.login-box > p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.login-box form {
+    text-align: left;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 7px;
+    color: #333;
+    font-weight: 600;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.login-box input:focus {
+    outline: none;
+    border-color: #0d6efd;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.register-text {
+    margin-top: 20px;
+}
+
+.register-text a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* PROFESSIONAL LOGIN PAGE */
+
+.login-body {
+    min-height: 100vh;
+    margin: 0;
+    background: #f4f7fb;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+}
+
+/* LEFT SIDE */
+
+.login-left {
+width: 50%;
+background:
+linear-gradient(rgba(8, 40, 85, 0.55), rgba(8, 40, 85, 0.55)),
+url("/static/images/loginleft.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+color: white;
+padding: 70px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+box-sizing: border-box;
+}
+.brand-logo {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+}
+
+.brand-logo span {
+    color: #dbeafe;
+}
+
+.login-left h1 {
+    color: white;
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.login-left > p {
+    color: #e0ecff;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.login-features {
+    margin-top: 35px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.feature span {
+    width: 28px;
+    height: 28px;
+    background: white;
+    color: #0d6efd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.feature p {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* RIGHT SIDE */
+
+.login-right {
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 40px;
+box-sizing: border-box;
+background:
+    linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)),
+    url("/static/images/loginright.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+
+.login-form-box {
+    width: 100%;
+    max-width: 430px;
+}
+
+.login-form-box h2 {
+    text-align: left;
+    font-size: 34px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+
+/* INPUTS */
+
+.login-form-box form > label {
+    display: block;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-box {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d9dee7;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    box-sizing: border-box;
+}
+
+.input-box span {
+    margin-left: 15px;
+    color: #777;
+}
+
+.input-box input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    font-size: 15px;
+}
+
+.input-box:focus-within {
+    border-color: #0d6efd;
+}
+
+
+/* OPTIONS */
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.remember {
+    display: flex !important;
+    align-items: center;
+    gap: 7px;
+    margin: 0 !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+
+.remember input {
+    width: auto !important;
+}
+
+.login-options a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+/* LOGIN BUTTON */
+
+.main-login-btn {
+    width: 100%;
+    height: 52px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-login-btn:hover {
+    background: #084298;
+    transform: translateY(-1px);
+}
+
+
+/* DIVIDER */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+
+/* CREATE ACCOUNT */
+
+.create-account {
+    text-align: center;
+    color: #777;
+    font-size: 15px;
+}
+
+.create-account a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* =========================
+   DASHBOARD PAGE
+========================= */
+
+.dashboard-body {
+    background: #f5f7fb;
+    min-height: 100vh;
+}
+
+/* DASHBOARD NAVBAR */
+
+.dashboard-navbar {
+    height: 75px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-logo {
+    font-size: 30px;
+    font-weight: 800;
+    color: #0d6efd;
+    letter-spacing: 1px;
+}
+
+.dashboard-logo span {
+    color: #222;
+}
+
+.dashboard-user {
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* MAIN CONTAINER */
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 30px;
+}
+
+
+/* STEP INDICATOR */
+
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 55px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step span {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step.active span {
+    background: #0d6efd;
+    color: white;
+}
+
+.step p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.step.active p {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.step-line {
+    width: 90px;
+    height: 2px;
+    background: #ddd;
+    margin: 0 15px;
+}
+
+
+/* SERVICE SECTION */
+
+.service-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.service-section h1 {
+    color: #222;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.dashboard-subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+
+/* SERVICE GRID */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dashboard-service-card {
+    border: 1px solid #e1e5eb;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    background: white;
+}
+
+.dashboard-service-card:hover {
+    border-color: #0d6efd;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.12);
+}
+
+.service-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.dashboard-service-card h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.dashboard-service-card p {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* CONTINUE BUTTON */
+
+.continue-btn {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 13px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 35px auto 0;
+    transition: 0.3s;
+}
+
+.continue-btn:hover {
+    background: #084298;
+    transform: translateY(-2px);
+}
+/* =========================
+   TECHNICIAN SECTION
+========================= */
+
+.technician-section {
+    background: white;
+    padding: 40px;
+    margin-top: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.technician-section h1 {
+    color: #222;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.technician-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.technician-card {
+    border: 1px solid #e1e5eb;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    background: white;
+    transition: 0.3s;
+}
+
+.technician-card:hover {
+    border-color: #0d6efd;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.12);
+}
+
+.technician-photo {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #eaf2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+
+.technician-card h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.technician-card p {
+    color: #777;
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.select-tech-btn {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 18px auto 0;
+    transition: 0.3s;
+}
+
+.select-tech-btn:hover {
+    background: #084298;
+    transform: translateY(-2px);
+}
+/* =========================
+   BOOKING SECTION
+========================= */
+
+.booking-section {
+    background: white;
+    padding: 40px;
+    margin-top: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.booking-section h1 {
+    color: #222;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.booking-box {
+    max-width: 850px;
+    margin: 30px auto 0;
+}
+
+
+/* SELECTED SERVICE & TECHNICIAN */
+
+.selected-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.selected-info > div {
+    background: #f4f7fb;
+    border: 1px solid #e1e5eb;
+    border-radius: 10px;
+    padding: 18px 20px;
+}
+
+.selected-info span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.selected-info strong {
+    color: #0d6efd;
+    font-size: 17px;
+}
+
+
+/* FORM */
+
+.booking-box form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d9dee7;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input {
+    height: 48px;
+}
+
+.form-group textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.08);
+}
+
+
+/* CONFIRM BUTTON */
+
+.confirm-booking-btn {
+    width: 100%;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.confirm-booking-btn:hover {
+    background: #084298;
+    transform: translateY(-2px);
+}
+/* =========================================
+   PREMIUM TECHNICIAN PAGE
+========================================= */
+
+.technician-page {
+    min-height: 100vh;
+    background: #f5f8fc;
+    margin: 0;
+}
+
+
+/* NAVBAR */
+
+.technician-navbar {
+    width: 100%;
+    height: 75px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.technician-logo {
+    font-size: 30px;
+    font-weight: 800;
+    color: #0d6efd;
+    letter-spacing: 1px;
+}
+
+.technician-logo span {
+    color: #222;
+}
+
+.back-service {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.back-service:hover {
+    color: #0d6efd;
+}
+
+
+/* PAGE HEADER */
+
+.technician-header {
+    text-align: center;
+    padding: 45px 20px 30px;
+}
+
+.technician-header h1 {
+    color: #1f2937;
+    font-size: 38px;
+    margin: 0 0 10px;
+}
+
+.technician-header p {
+    color: #6b7280;
+    font-size: 17px;
+    margin: 0;
+}
+
+
+/* TECHNICIAN LIST */
+
+.technician-list {
+    width: 92%;
+    max-width: 1400px;
+    margin: 10px auto 60px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* TECHNICIAN CARD */
+
+.technician-card-new {
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 18px;
+    padding: 28px;
+
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.technician-card-new:hover {
+    transform: translateY(-7px);
+    border-color: #0d6efd;
+    box-shadow: 0 12px 30px rgba(13, 110, 253, 0.14);
+}
+
+
+/* TECHNICIAN IMAGE */
+
+.technician-image {
+    width: 95px;
+    height: 95px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #eaf2ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 48px;
+
+    border: 5px solid #f5f8fc;
+}
+
+
+/* INFORMATION */
+
+.technician-info {
+    text-align: center;
+    flex: 1;
+}
+
+.technician-name-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.technician-name-row h2 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 24px;
+}
+
+.available {
+    color: #16a34a;
+    background: #ecfdf3;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.speciality {
+    color: #6b7280;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+
+/* STATS */
+
+.technician-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin: 18px 0;
+}
+
+.technician-stats span {
+    background: #f5f7fb;
+    border-radius: 8px;
+    padding: 8px 10px;
+
+    color: #4b5563;
+    font-size: 13px;
+}
+
+
+/* PRICE */
+
+.price {
+    color: #6b7280;
+    font-size: 15px;
+    margin: 18px 0;
+}
+
+.price strong {
+    color: #0d6efd;
+    font-size: 20px;
+}
+
+
+/* VERIFIED */
+
+.verified {
+    display: inline-block;
+
+    color: #0d6efd;
+    background: #eef5ff;
+
+    padding: 7px 13px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* BUTTONS */
+
+.technician-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.profile-btn,
+.select-btn {
+    flex: 1;
+
+    height: 45px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.profile-btn {
+    background: white;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+}
+
+.profile-btn:hover {
+    background: #eef5ff;
+}
+
+.select-btn {
+    background: #0d6efd;
+    color: white;
+    border: 1px solid #0d6efd;
+}
+
+.select-btn:hover {
+    background: #084298;
+    transform: translateY(-1px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .technician-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .technician-list {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .technician-navbar {
+        padding: 0 20px;
+    }
+
+    .technician-header h1 {
+        font-size: 30px;
+    }
+
+}
+/* =========================================
+   CLICKABLE DASHBOARD SERVICE CARDS
+   ========================================= */
+
+.dashboard-service-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+
+/* Keep text inside cards clean */
+
+.dashboard-service-card h3 {
+    text-decoration: none;
+}
+
+
+/* Emergency service card */
+
+.emergency-card {
+    border: 1px solid #e5eaf1;
+}
+
+
+/* Hover effect */
+
+.dashboard-service-card:hover {
+    text-decoration: none;
+}/* =========================================
+   FINAL FIX - TECHNICIAN ACTION BUTTONS
+   ========================================= */
+
+.technician-actions {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 12px !important;
+
+    margin-top: 25px !important;
+
+    align-items: stretch !important;
+}
+
+
+/* VIEW PROFILE */
+
+.technician-actions .profile-btn {
+    width: 100% !important;
+
+    height: 46px !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    text-align: center !important;
+
+    text-decoration: none !important;
+
+    line-height: normal !important;
+}
+
+
+/* SELECT TECHNICIAN */
+
+.technician-actions .select-btn {
+    width: 100% !important;
+
+    height: 46px !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    text-align: center !important;
+
+    line-height: normal !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .technician-actions {
+        grid-template-columns: 1fr !important;
+    }
+
+}/* =========================================
+   FIXNOW - TECHNICIAN PROFILE FINAL DESIGN
+   ========================================= */
+
+.profile-page {
+    min-height: 100vh;
+    margin: 0;
+    background: #f5f8fc;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.profile-navbar {
+    width: 100%;
+    height: 75px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.profile-logo {
+    font-size: 30px;
+    font-weight: 800;
+
+    color: #0d6efd;
+
+    letter-spacing: 1px;
+}
+
+.profile-logo span {
+    color: #222222;
+}
+
+.back-link {
+    text-decoration: none;
+
+    color: #555555;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: #0d6efd;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.profile-container {
+    width: 92%;
+
+    max-width: 1100px;
+
+    margin: 55px auto 70px;
+}
+
+
+/* ================= PROFILE CARD ================= */
+
+.profile-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 35% 65%;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= LEFT SIDE ================= */
+
+.profile-left {
+    background: linear-gradient(
+        145deg,
+        #0d6efd,
+        #084298
+    );
+
+    color: #ffffff;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 135px;
+    height: 135px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    margin-bottom: 20px;
+}
+
+.profile-available {
+    background: rgba(255, 255, 255, 0.18);
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+.profile-left h1 {
+    color: #ffffff;
+
+    font-size: 30px;
+
+    margin: 0 0 8px;
+
+    text-align: center;
+}
+
+.profile-role {
+    color: #dbeafe;
+
+    font-size: 16px;
+
+    margin: 0 0 18px;
+
+    text-align: center;
+}
+
+.profile-rating {
+    color: #ffffff;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.profile-rating span {
+    font-size: 13px;
+
+    font-weight: normal;
+
+    color: #dbeafe;
+}
+
+
+/* ================= RIGHT SIDE ================= */
+
+.profile-right {
+    padding: 45px;
+}
+
+.profile-right h2 {
+    text-align: left;
+
+    margin: 0 0 25px;
+
+    color: #1f2937;
+
+    font-size: 27px;
+}
+
+.profile-right h3 {
+    color: #1f2937;
+
+    font-size: 20px;
+
+    margin: 25px 0 10px;
+
+    text-align: left;
+}
+
+
+/* ================= DETAILS ================= */
+
+.profile-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.detail-box {
+    background: #f5f8fc;
+
+    border: 1px solid #e5eaf1;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.detail-box > span {
+    font-size: 25px;
+}
+
+.detail-box small {
+    display: block;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.detail-box strong {
+    color: #1f2937;
+
+    font-size: 15px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-technician {
+    color: #6b7280;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin: 0 0 20px;
+
+    text-align: left;
+}
+
+
+/* ================= VERIFIED ================= */
+
+.verified-profile {
+    display: inline-block;
+
+    background: #eef5ff;
+
+    color: #0d6efd;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= BOOK BUTTON ================= */
+
+.book-profile-btn {
+    width: 100%;
+
+    height: 52px;
+
+    background: #0d6efd;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin: 0;
+
+    transition: 0.3s;
+}
+
+.book-profile-btn:hover {
+    background: #084298;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .profile-card {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-navbar {
+        padding: 0 20px;
+    }
+
+    .profile-right {
+        padding: 30px;
+    }
+
+}/* ================= FULL SCREEN EMERGENCY ================= */
+
+.emergency-control {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+
+    padding: 45px 6% 60px;
+
+    background: #f7faff;
+}
+
+
+/* Emergency Header */
+
+.emergency-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.emergency-title-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff0f0;
+    border-radius: 16px;
+
+    font-size: 32px;
+}
+
+.emergency-title h1 {
+    margin: 0;
+    font-size: 34px;
+    color: #172033;
+}
+
+.emergency-title p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+
+/* Location */
+
+.emergency-location {
+    width: 100%;
+    box-sizing: border-box;
+
+    background: white;
+    border: 1px solid #e4e9f0;
+    border-radius: 18px;
+
+    padding: 22px 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.location-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.location-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef5ff;
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+.location-left h3 {
+    margin: 0 0 5px;
+    color: #172033;
+}
+
+.location-left p {
+    margin: 0;
+    color: #7b8494;
+}
+
+
+/* Location Button */
+
+.use-location-btn {
+    border: none;
+    background: #1769ff;
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.use-location-btn:hover {
+    background: #0d56d9;
+}
+
+
+/* Emergency Heading */
+
+.emergency-heading {
+    margin-bottom: 22px;
+}
+
+.emergency-heading h2 {
+    margin: 0 0 6px;
+
+    font-size: 25px;
+    color: #172033;
+}
+
+.emergency-heading p {
+    margin: 0;
+
+    color: #7b8494;
+}
+
+
+/* Emergency Grid */
+
+.emergency-option-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Emergency Cards */
+
+.emergency-option-card {
+    min-height: 150px;
+
+    background: white;
+
+    border: 1px solid #e4e9f0;
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.emergency-option-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #1769ff;
+
+    box-shadow: 0 10px 28px rgba(23, 105, 255, 0.12);
+}
+
+
+/* Icons */
+
+.option-icon {
+    width: 65px;
+    height: 65px;
+
+    min-width: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef5ff;
+
+    border-radius: 16px;
+
+    font-size: 32px;
+}
+
+
+/* Card Text */
+
+.option-content h3 {
+    margin: 0 0 8px;
+
+    font-size: 18px;
+
+    color: #172033;
+}
+
+.option-content p {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #7b8494;
+}
+
+
+/* General Mechanic */
+
+.emergency-mechanic {
+    grid-column: span 3;
+}
+
+
+/* Request Button */
+
+.emergency-action {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+.emergency-request-btn {
+    border: none;
+
+    background: #e53935;
+
+    color: white;
+
+    padding: 16px 38px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(229, 57, 53, 0.25);
+
+    transition: 0.25s;
+}
+
+.emergency-request-btn:hover {
+    background: #c62828;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .emergency-option-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .emergency-mechanic {
+        grid-column: span 2;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .emergency-control {
+        padding: 30px 20px 45px;
+    }
+
+    .emergency-title h1 {
+        font-size: 26px;
+    }
+
+    .emergency-location {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .use-location-btn {
+        width: 100%;
+    }
+
+    .emergency-option-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency-mechanic {
+        grid-column: span 1;
+    }
+}/* ================= EMERGENCY FULL WIDTH FIX ================= */
+
+body:has(.emergency-control) {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body:has(.emergency-control) .emergency-control {
+    width: 100vw;
+    max-width: none;
+    min-height: calc(100vh - 80px);
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body:has(.emergency-control) .technician-container,
+body:has(.emergency-control) .technicians-container,
+body:has(.emergency-control) .technician-page,
+body:has(.emergency-control) .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ================= BOOKING CONFIRMATION PAGE ================= */
+
+.confirmation-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #f7faff;
+    color: #172033;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.confirmation-navbar {
+    height: 70px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #e6ebf2;
+
+    box-sizing: border-box;
+}
+
+.confirmation-logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.confirmation-logo span {
+    color: #1769ff;
+}
+
+.confirmation-home {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.confirmation-home:hover {
+    color: #1769ff;
+}
+
+
+/* ================= MAIN ================= */
+
+.confirmation-container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 55px 25px 70px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+/* ================= SUCCESS ICON ================= */
+
+.success-icon {
+    width: 82px;
+    height: 82px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e9f9ef;
+    color: #20a05a;
+
+    font-size: 42px;
+    font-weight: 700;
+}
+
+
+/* ================= HEADING ================= */
+
+.confirmation-container h1 {
+    margin: 0;
+
+    font-size: 34px;
+
+    color: #172033;
+}
+
+.confirmation-message {
+    margin: 10px 0 32px;
+
+    color: #737d8e;
+    font-size: 16px;
+}
+
+
+/* ================= BOOKING SUMMARY ================= */
+
+.booking-summary {
+    background: white;
+
+    border: 1px solid #e3e8ef;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    text-align: left;
+
+    box-shadow: 0 8px 30px rgba(23, 32, 51, 0.06);
+}
+
+
+/* Header */
+
+.booking-summary-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.summary-label {
+    display: block;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8a94a6;
+}
+
+.booking-summary-header h2 {
+    margin: 5px 0 0;
+
+    font-size: 20px;
+
+    color: #172033;
+}
+
+.booking-status {
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #e9f9ef;
+    color: #16834a;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ================= SUMMARY ITEMS ================= */
+
+.summary-section {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 19px 0;
+
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.summary-icon {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eef5ff;
+
+    font-size: 21px;
+}
+
+.summary-section span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #8a94a6;
+
+    font-size: 13px;
+}
+
+.summary-section strong {
+    display: block;
+
+    color: #263248;
+
+    font-size: 15px;
+}
+
+
+/* ================= PRICE ================= */
+
+.summary-price {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 22px;
+}
+
+.summary-price span {
+    color: #6f7888;
+
+    font-size: 14px;
+}
+
+.summary-price strong {
+    font-size: 22px;
+
+    color: #1769ff;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.confirmation-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 28px;
+}
+
+.track-technician-btn,
+.back-dashboard-btn {
+    min-width: 190px;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    box-sizing: border-box;
+
+    transition: 0.2s;
+}
+
+.track-technician-btn {
+    background: #1769ff;
+    color: white;
+}
+
+.track-technician-btn:hover {
+    background: #0d56d9;
+}
+
+.back-dashboard-btn {
+    background: white;
+
+    color: #3f4a5c;
+
+    border: 1px solid #dce2ea;
+}
+
+.back-dashboard-btn:hover {
+    border-color: #1769ff;
+    color: #1769ff;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .confirmation-container {
+        padding: 40px 18px 50px;
+    }
+
+    .confirmation-container h1 {
+        font-size: 28px;
+    }
+
+    .booking-summary {
+        padding: 20px;
+    }
+
+    .confirmation-actions {
+        flex-direction: column;
+    }
+
+    .track-technician-btn,
+    .back-dashboard-btn {
+        width: 100%;
+    }
+}/* ================= BOOKING PAGE ================= */
+
+.booking-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #f7faff;
+    color: #172033;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.booking-navbar {
+    height: 70px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #e5eaf1;
+}
+
+.booking-logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.booking-logo span {
+    color: #1769ff;
+}
+
+.booking-back {
+    text-decoration: none;
+    color: #596579;
+    font-weight: 600;
+}
+
+.booking-back:hover {
+    color: #1769ff;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.booking-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 45px 25px 70px;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= HEADER ================= */
+
+.booking-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.booking-header h1 {
+    margin: 0 0 8px;
+
+    font-size: 32px;
+    color: #172033;
+}
+
+.booking-header p {
+    margin: 0;
+
+    color: #737d8e;
+    font-size: 15px;
+}
+
+
+/* ================= BOOKING CARD ================= */
+
+.booking-card {
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 30px rgba(23, 32, 51, 0.06);
+}
+
+
+/* ================= TECHNICIAN ================= */
+
+.selected-technician {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.technician-avatar {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #eef5ff;
+
+    font-size: 32px;
+}
+
+.selected-technician span {
+    color: #8993a3;
+    font-size: 12px;
+}
+
+.selected-technician h2 {
+    margin: 4px 0;
+
+    font-size: 21px;
+    color: #172033;
+}
+
+.selected-technician p {
+    margin: 0;
+
+    color: #657084;
+    font-size: 13px;
+}
+
+
+/* ================= FORM ================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #344054;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dce2ea;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #263248;
+
+    font-size: 14px;
+
+    outline: none;
+
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1769ff;
+
+    box-shadow: 0 0 0 3px rgba(23, 105, 255, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ================= TWO COLUMN FORM ================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* ================= PRICE ================= */
+
+.booking-price {
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f5f8ff;
+
+    border: 1px solid #e2ebff;
+
+    border-radius: 12px;
+}
+
+.booking-price span {
+    display: block;
+
+    color: #4b5563;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.booking-price small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #8a94a6;
+
+    font-size: 12px;
+}
+
+.booking-price strong {
+    color: #1769ff;
+
+    font-size: 23px;
+}
+
+
+/* ================= CONFIRM BUTTON ================= */
+
+.confirm-booking-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #1769ff;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.confirm-booking-btn:hover {
+    background: #0d56d9;
+
+    transform: translateY(-1px);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+    .booking-container {
+        padding: 35px 18px 50px;
+    }
+
+    .booking-card {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .booking-header h1 {
+        font-size: 27px;
+    }
+
+    .booking-navbar {
+        padding: 0 20px;
+    }
+}
+/* ================= TRACKING PAGE ================= */
+
+.tracking-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #f5f8fc;
+    color: #172033;
+    overflow-x: hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.tracking-navbar {
+    height: 70px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #e3e8ef;
+    box-sizing: border-box;
+}
+
+.tracking-logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tracking-logo span {
+    color: #1769ff;
+}
+
+.tracking-home {
+    text-decoration: none;
+    color: #596579;
+    font-weight: 600;
+}
+
+.tracking-home:hover {
+    color: #1769ff;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.tracking-container {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 35px 25px 55px;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= HEADER ================= */
+
+.tracking-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.tracking-header h1 {
+    margin: 0 0 6px;
+
+    font-size: 30px;
+}
+
+.tracking-header p {
+    margin: 0;
+
+    color: #737d8e;
+}
+
+.tracking-status {
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    background: #e9f9ef;
+    color: #16834a;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ================= TRACKING CARD ================= */
+
+.tracking-card {
+    display: grid;
+
+    grid-template-columns: 1.65fr 0.8fr;
+
+    min-height: 600px;
+
+    background: white;
+
+    border: 1px solid #e1e7ef;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(23, 32, 51, 0.07);
+}
+
+
+/* ================= MAP ================= */
+
+.map-area {
+    position: relative;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    background: #e9eef4;
+}
+
+
+/* Fake map grid */
+
+.map-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(#d7dee7 1px, transparent 1px),
+        linear-gradient(90deg, #d7dee7 1px, transparent 1px);
+
+    background-size: 55px 55px;
+
+    opacity: 0.55;
+}
+
+
+/* Roads */
+
+.map-road {
+    position: absolute;
+
+    background: white;
+
+    box-shadow: 0 0 0 1px #d5dce5;
+}
+
+.road-one {
+    width: 120%;
+    height: 70px;
+
+    left: -10%;
+    top: 48%;
+
+    transform: rotate(-10deg);
+}
+
+.road-two {
+    width: 70px;
+    height: 120%;
+
+    left: 55%;
+    top: -10%;
+
+    transform: rotate(18deg);
+}
+
+
+/* ================= MARKERS ================= */
+
+.map-marker {
+    position: absolute;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+
+    font-size: 24px;
+}
+
+.map-marker span {
+    position: absolute;
+
+    top: 57px;
+
+    white-space: nowrap;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    background: white;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #263248;
+}
+
+.customer-marker {
+    left: 23%;
+    top: 65%;
+}
+
+.technician-marker {
+    right: 25%;
+    top: 28%;
+}
+
+
+/* ================= ROUTE ================= */
+
+.tracking-route {
+    position: absolute;
+
+    width: 46%;
+    height: 5px;
+
+    left: 30%;
+    top: 53%;
+
+    background: #1769ff;
+
+    transform: rotate(-27deg);
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 8px rgba(23, 105, 255, 0.3);
+}
+
+
+/* ================= TECHNICIAN INFO ================= */
+
+.tracking-info {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tracking-technician {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.tracking-avatar {
+    width: 62px;
+    height: 62px;
+
+    min-width: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #eef5ff;
+
+    font-size: 30px;
+}
+
+.tracking-technician span {
+    font-size: 12px;
+    color: #8a94a6;
+}
+
+.tracking-technician h2 {
+    margin: 4px 0;
+
+    font-size: 20px;
+}
+
+.tracking-technician p {
+    margin: 0;
+
+    font-size: 12px;
+    color: #657084;
+}
+
+
+/* ================= ETA ================= */
+
+.eta-box {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: #f2f6ff;
+
+    border: 1px solid #dce8ff;
+
+    text-align: center;
+}
+
+.eta-box span {
+    display: block;
+
+    color: #697589;
+
+    font-size: 13px;
+}
+
+.eta-box strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #1769ff;
+
+    font-size: 30px;
+}
+
+
+/* ================= DETAILS ================= */
+
+.tracking-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.tracking-details div {
+    padding: 15px;
+
+    border: 1px solid #e5eaf1;
+
+    border-radius: 12px;
+}
+
+.tracking-details span {
+    display: block;
+
+    color: #7b8494;
+
+    font-size: 12px;
+}
+
+.tracking-details strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.call-technician-btn {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1769ff;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.call-technician-btn:hover {
+    background: #0d56d9;
+}
+
+.tracking-dashboard-btn {
+    margin-top: 12px;
+
+    padding: 13px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    border: 1px solid #dce2ea;
+
+    border-radius: 10px;
+
+    color: #4b5563;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tracking-dashboard-btn:hover {
+    color: #1769ff;
+    border-color: #1769ff;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .tracking-card {
+        grid-template-columns: 1fr;
+    }
+
+    .map-area {
+        min-height: 450px;
+    }
+
+    .tracking-info {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .tracking-container {
+        padding: 25px 15px 40px;
+    }
+
+    .tracking-header {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .tracking-header h1 {
+        font-size: 26px;
+    }
+
+    .tracking-card {
+        border-radius: 15px;
+    }
+
+    .map-area {
+        min-height: 380px;
+    }
+
+    .tracking-info {
+        padding: 22px;
+    }
+
+    .tracking-details {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================
+   FINAL TECHNICIAN BUTTON FIX
+========================================= */
+
+.technician-actions .select-technician-btn {
+    width: 100%;
+    height: 46px;
+
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    text-decoration: none;
+
+    background: #0d6efd;
+    color: white;
+
+    border: 1px solid #0d6efd;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.technician-actions .select-technician-btn:hover {
+    background: #084298;
+    color: white;
+    transform: translateY(-1px);
+}
+
+
+/* Remove blue border from whole technician card */
+
+.technician-card-new:hover {
+    transform: translateY(-4px);
+    border-color: #e5eaf1;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+/* =========================================
+   FINAL TECHNICIAN BUTTON FIX
+========================================= */
+
+.technician-actions .select-technician-btn {
+    width: 100%;
+    height: 46px;
+
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    text-decoration: none;
+
+    background: #0d6efd;
+    color: white;
+
+    border: 1px solid #0d6efd;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.technician-actions .select-technician-btn:hover {
+    background: #084298;
+    color: white;
+    transform: translateY(-1px);
+}
+
+
+/* Remove blue border from whole technician card */
+
+.technician-card-new:hover {
+    transform: translateY(-4px);
+    border-color: #e5eaf1;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+.emergency-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto 35px;
+}
+/* ================================
+   EMERGENCY GET ASSISTANCE BUTTON
+================================ */
+
+.emergency-assistance-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 12px;
+    padding: 10px 18px;
+
+    background: #0d6efd;
+    color: white;
+
+    border: 1px solid #0d6efd;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.emergency-assistance-btn:hover {
+    background: #084298;
+    color: white;
+    text-decoration: none;
+}/* =========================================
+   EMERGENCY BOOKING PAGE
+========================================= */
+
+.emergency-booking-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #f7faff;
+    color: #172033;
+}
+
+/* Header */
+
+.emergency-booking-header {
+    text-align: center;
+    padding: 45px 20px 25px;
+}
+
+.emergency-booking-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff0f0;
+    border-radius: 18px;
+
+    font-size: 38px;
+}
+
+.emergency-booking-header h1 {
+    margin: 0;
+    color: #1769ff;
+    font-size: 34px;
+}
+
+.emergency-booking-header p {
+    margin-top: 8px;
+    color: #737d8e;
+    font-size: 16px;
+}
+
+
+/* Main Container */
+
+.emergency-booking-container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 0 25px 60px;
+
+    box-sizing: border-box;
+}
+
+
+/* Booking Card */
+
+.emergency-booking-card {
+    background: white;
+
+    border: 1px solid #e3e8ef;
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 30px rgba(23, 32, 51, 0.06);
+}
+
+
+/* Selected Emergency */
+
+.emergency-selected {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding-bottom: 25px;
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.emergency-selected-icon {
+    width: 65px;
+    height: 65px;
+
+    min-width: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef5ff;
+    border-radius: 16px;
+
+    font-size: 32px;
+}
+
+.emergency-selected span {
+    display: block;
+
+    color: #8a94a6;
+
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.emergency-selected h2 {
+    margin: 0;
+
+    color: #172033;
+    font-size: 21px;
+}
+
+.emergency-selected p {
+    margin: 6px 0 0;
+
+    color: #7b8494;
+    font-size: 14px;
+}
+
+
+/* Emergency Notice */
+
+.emergency-notice {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin: 20px 0;
+
+    padding: 15px;
+
+    background: #fff8e8;
+
+    border: 1px solid #ffe3a3;
+    border-radius: 10px;
+}
+
+.emergency-notice > span {
+    font-size: 20px;
+}
+
+.emergency-notice strong {
+    color: #7a5200;
+}
+
+.emergency-notice p {
+    margin: 4px 0 0;
+
+    color: #856f45;
+    font-size: 13px;
+}
+
+
+/* Request Button */
+
+.emergency-booking-page .emergency-request-btn {
+    width: 100%;
+
+    display: flex;
+        align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: #e53935;
+    color: white;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.emergency-booking-page .emergency-request-btn:hover {
+    background: #c62828;
+    color: white;
+    text-decoration: none;
+}
+/* ==========================================
+   FIXNOW - PREMIUM BOOKING PAGE
+========================================== */
+
+body.booking-page {
+    margin: 0;
+    color: #17233f;
+    background:
+        radial-gradient(ellipse at 5% 10%, rgba(83, 151, 255, 0.14), transparent 35%),
+        radial-gradient(ellipse at 95% 85%, rgba(45, 116, 255, 0.12), transparent 32%),
+        linear-gradient(135deg, #f7faff 0%, #edf4ff 55%, #f8faff 100%);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Navbar */
+.booking-navbar {
+    position: relative;
+    z-index: 2;
+    min-height: 76px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid #e6edfa;
+    box-shadow: 0 4px 22px rgba(30, 65, 120, 0.04);
+}
+
+.booking-logo {
+    font-size: 27px;
+    font-weight: 850;
+    letter-spacing: -1px;
+    color: #18233e;
+}
+
+.booking-logo span {
+    color: #246bfd;
+}
+
+.booking-back {
+    text-decoration: none;
+    color: #425574;
+    font-size: 14px;
+    font-weight: 650;
+    transition: color 0.2s ease;
+}
+
+.booking-back:hover {
+    color: #246bfd;
+}
+
+/* Main section */
+.booking-container {
+    width: min(900px, 90%);
+    margin: 44px auto 70px;
+}
+
+/* Heading */
+.booking-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.booking-header h1 {
+    color: #17233f;
+    font-size: clamp(29px, 4vw, 39px);
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    margin: 0 0 10px;
+}
+
+.booking-header h1::first-letter {
+    color: #246bfd;
+}
+
+.booking-header p {
+    color: #72819c;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Main card */
+.booking-card {
+    position: relative;
+    overflow: hidden;
+    padding: 32px;
+    border: 1px solid rgba(219, 230, 248, 0.95);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow:
+        0 22px 65px rgba(43, 83, 145, 0.09),
+        0 3px 10px rgba(43, 83, 145, 0.03);
+}
+
+.booking-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #246bfd, #63a5ff, #246bfd);
+}
+
+/* Technician card */
+.selected-technician {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    padding: 22px;
+    margin-bottom: 30px;
+    border: 1px solid #e2ebff;
+    border-radius: 18px;
+    background: linear-gradient(115deg, #eff5ff, #f8faff 75%);
+}
+
+.technician-avatar {
+    width: 50px;
+    height: 66px;
+    min-width: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: #246bfd;
+    background: linear-gradient(145deg, #dce9ff, #edf4ff);
+    font-size: 30px;
+    box-shadow: inset 0 0 0 1px rgba(36, 107, 253, 0.06);
+}
+
+.selected-technician span {
+    display: block;
+    color: #7788a5;
+    font-size: 12px;
+    font-weight: 650;
+    margin-bottom: 5px;
+}
+
+.selected-technician h2 {
+    margin: 0 0 7px;
+    color: #1b2945;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.selected-technician p {
+    margin: 0;
+    color: #15966a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Form groups */
+.booking-card .form-group {
+    margin-bottom: 23px;
+}
+
+.booking-card .form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #293956;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Inputs and textareas */
+.booking-card .form-group input,
+.booking-card .form-group select,
+.booking-card .form-group textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 16px;
+    border: 1px solid #dce5f2;
+    border-radius: 12px;
+    background: #fbfcff;
+    color: #263753;
+    font-family: inherit;
+    font-size: 14px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.booking-card .form-group input:hover,
+.booking-card .form-group select:hover,
+.booking-card .form-group textarea:hover {
+    border-color: #b8cdf5;
+    background: #ffffff;
+}
+
+.booking-card .form-group input:focus,
+.booking-card .form-group select:focus,
+.booking-card .form-group textarea:focus {
+    outline: none;
+    border-color: #3478fa;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(36, 107, 253, 0.10);
+}
+
+.booking-card .form-group input::placeholder,
+.booking-card .form-group textarea::placeholder {
+    color: #9aa8be;
+}
+
+.booking-card .form-group textarea {
+    min-height: 115px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Price / service note */
+.booking-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px;
+    margin: 28px 0 24px;
+    border: 1px solid #e1eaff;
+    border-radius: 15px;
+    background: linear-gradient(115deg, #edf4ff, #f8faff);
+}
+
+.booking-price span {
+    display: block;
+    color: #263b5c;
+    font-size: 14px;
+    font-weight: 750;
+    margin-bottom: 5px;
+}
+
+.booking-price small {
+    display: block;
+    color: #8291aa;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.booking-price strong {
+    color: #1764f5;
+    font-size: 17px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* Confirm button */
+.confirm-booking-btn {
+    display: block;
+    width: 100%;
+    padding: 17px 22px;
+    border: none;
+    border-radius: 13px;
+    background: linear-gradient(100deg, #1764f5, #347fff);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+    box-shadow: 0 9px 22px rgba(36, 107, 253, 0.22);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.confirm-booking-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.04);
+    box-shadow: 0 13px 28px rgba(36, 107, 253, 0.30);
+}
+
+.confirm-booking-btn:active {
+    transform: translateY(0);
+}
+
+/* Smooth page appearance */
+@keyframes bookingFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.booking-header,
+.booking-card {
+    animation: bookingFadeIn 0.5s ease both;
+}
+
+.booking-card {
+    animation-delay: 0.08s;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .booking-navbar {
+        min-height: 68px;
+        padding: 0 5%;
+    }
+
+    .booking-logo {
+        font-size: 23px;
+    }
+
+    .booking-container {
+        width: 92%;
+        margin: 30px auto 45px;
+    }
+
+    .booking-header h1 {
+        font-size: 29px;
+    }
+
+    .booking-card {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .selected-technician {
+        padding: 16px;
+        gap: 13px;
+    }
+
+    .technician-avatar {
+        width: 53px;
+        height: 53px;
+        min-width: 53px;
+        border-radius: 15px;
+        font-size: 25px;
+    }
+
+    .selected-technician h2 {
+        font-size: 19px;
+    }
+
+    .booking-card .form-group input,
+    .booking-card .form-group select,
+    .booking-card .form-group textarea {
+        padding: 13px;
+    }
+
+    .booking-price {
+        padding: 16px;
+    }
+}
+/* =========================================
+   FIXNOW - DATASET STATISTICS
+========================================= */
+
+.dataset-section {
+    margin-top: 40px;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.dataset-section > h2 {
+    margin: 0 0 10px;
+    color: #1f2937;
+    font-size: 28px;
+}
+
+.dataset-section > .dashboard-subtitle {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.dataset-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.dataset-stat-card {
+    padding: 25px;
+    background: #f5f8ff;
+    border: 1px solid #e1eaff;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.dataset-stat-card:hover {
+    transform: translateY(-4px);
+    border-color: #0d6efd;
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.10);
+}
+
+.dataset-stat-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.dataset-stat-card h3 {
+    margin-bottom: 12px;
+    color: #4b5563;
+    font-size: 16px;
+}
+
+.dataset-stat-number {
+    margin: 0;
+    color: #0d6efd;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: left;
+}
+
+.dataset-status-heading {
+    margin: 35px 0 20px;
+    color: #1f2937;
+    font-size: 22px;
+    text-align: left;
+}
+
+.dataset-status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.dataset-status-card {
+    padding: 20px 15px;
+    background: #ffffff;
+    border: 1px solid #e1e5eb;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.dataset-status-card:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 6px 18px rgba(13, 110, 253, 0.08);
+}
+
+.dataset-status-card h4 {
+    margin-bottom: 12px;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+.dataset-status-card p {
+    margin: 0;
+    color: #0d6efd;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.dataset-empty-message {
+    padding: 20px;
+    background: #f5f8ff;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+.dataset-note {
+    margin-top: 25px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .dataset-status-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .dataset-section {
+        padding: 22px 16px;
+    }
+
+    .dataset-section > h2 {
+        font-size: 23px;
+    }
+
+    .dataset-stats-grid,
+    .dataset-status-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dataset-stat-number {
+        font-size: 28px;
+    }
+}
+/* REAL MAP */
+.map-area {
+    position: relative;
+    min-height: 600px;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    background: #e9eef4;
+    border-radius: 12px;
+    z-index: 1;
+}

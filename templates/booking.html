@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixNow - Book Service</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="booking-page">
+
+    <nav class="booking-navbar">
+        <div class="booking-logo">
+            FIX<span>NOW</span>
+        </div>
+
+        <a href="{{ url_for('dashboard') }}" class="booking-back">
+            ← Back to Services
+        </a>
+    </nav>
+
+    <main class="booking-container">
+
+        <div class="booking-header">
+            <h1>Book Your Service</h1>
+            <p>Fill in your details to confirm your service booking.</p>
+        </div>
+
+        <div class="booking-card">
+
+            <div class="selected-technician">
+                <div class="technician-avatar">🔧</div>
+
+                <div>
+                    <span>Selected Technician</span>
+                    <h2>{{ technician.replace('%20', ' ') }}</h2>
+                    <p>✓ Ready to assist you</p>
+                </div>
+            </div>
+
+            <form action="{{ url_for('confirmation', technician=technician) }}"
+                  method="post">
+
+                <!-- Selected service ko backend tak bhejne ke liye -->
+                <input type="hidden" name="service" value="{{ service }}">
+
+                <div class="form-group">
+                    <label for="date">Preferred Date *</label>
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        min="{{ today }}"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Preferred Time *</label>
+                    <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="{{ user_name | default('') }}"
+                        placeholder="Enter your name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number *</label>
+                    <input
+                        type="tel"
+                        id="mobile"
+                        name="mobile"
+                        placeholder="Enter 10-digit mobile number"
+                        pattern="[0-9]{10}"
+                        minlength="10"
+                        maxlength="10"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Service Address *</label>
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="3"
+                        placeholder="Enter your complete service address"
+                        required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="problem">Describe Your Problem *</label>
+                    <textarea
+                        id="problem"
+                        name="problem"
+                        rows="4"
+                        placeholder="Tell us what needs to be repaired..."
+                        required></textarea>
+                </div>
+
+                <div class="booking-price">
+                    <div>
+                        <span>Service Booking</span>
+                        <small>Final charges may vary depending on the work.</small>
+                    </div>
+
+                    <strong>As per service</strong>
+                </div>
+
+                <button type="submit" class="confirm-booking-btn">
+                    ✓ Confirm Booking
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

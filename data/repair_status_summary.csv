@@ -1,0 +1,9 @@
+dataset,repair_status,record_count
+EEE,Fixed,226733
+EEE,End of life,104321
+EEE,Repairable,72504
+EEE,Unknown,12724
+Non-EEE,Fixed,173043
+Non-EEE,Repairable,15032
+Non-EEE,End of life,9911
+Non-EEE,Unknown,5605

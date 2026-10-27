@@ -1,0 +1,9 @@
+service_id,service_name,description,category,data_type
+S001,AC Repair,Inspection and repair support for air conditioners.,Home Appliance Repair,project_defined_demo
+S002,Electrician,"Electrical fitting, fault checking, and repair support.",Electrical,project_defined_demo
+S003,Plumber,"Tap, pipe, leakage, and bathroom plumbing support.",Plumbing,project_defined_demo
+S004,Washing Machine,Inspection and repair support for washing machines.,Home Appliance Repair,project_defined_demo
+S005,Refrigerator,Inspection and repair support for refrigerators.,Home Appliance Repair,project_defined_demo
+S006,CCTV,"CCTV installation, checking, and repair support.",Security Systems,project_defined_demo
+S007,Computer & Laptop,Computer and laptop troubleshooting and repair support.,Computer Repair,project_defined_demo
+S008,Emergency Services,Urgent repair and service assistance.,Emergency,project_defined_demo

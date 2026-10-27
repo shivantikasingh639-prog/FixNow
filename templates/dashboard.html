@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixNow - Choose Service</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- NAVBAR -->
+    <nav class="dashboard-navbar">
+        <div class="dashboard-logo">
+            FIX<span>NOW</span>
+        </div>
+
+        <div class="dashboard-user">
+            <h2>Welcome, {{ user_name }} 👋</h2>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-container">
+
+        <!-- SERVICE SECTION -->
+        <section class="service-section">
+
+            <h1>What service do you need?</h1>
+
+            <p class="dashboard-subtitle">
+                Select a service to find the best technicians for you.
+            </p>
+
+            <div class="service-grid">
+
+                <!-- AC REPAIR -->
+                <a href="{{ url_for('technicians', service='AC Repair') }}"
+                   class="dashboard-service-card">
+                    <div class="service-icon">❄️</div>
+                    <h3>AC Repair</h3>
+                    <p>Repair &amp; maintenance</p>
+                </a>
+
+                <!-- ELECTRICIAN -->
+                <a href="{{ url_for('technicians', service='Electrician') }}"
+                   class="dashboard-service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrician</h3>
+                    <p>Electrical services</p>
+                </a>
+
+                <!-- PLUMBER -->
+                <a href="{{ url_for('technicians', service='Plumber') }}"
+                   class="dashboard-service-card">
+                    <div class="service-icon">🚰</div>
+                    <h3>Plumber</h3>
+                    <p>Plumbing services</p>
+                </a>
+
+                <!-- WASHING MACHINE -->
+                <a href="{{ url_for('technicians', service='Washing Machine') }}"
+                   class="dashboard-service-card">
+                    <div class="service-icon">🧺</div>
+                    <h3>Washing Machine</h3>
+                    <p>Repair &amp; service</p>
+                </a>
+
+                <!-- REFRIGERATOR -->
+                <a href="{{ url_for('technicians', service='Refrigerator') }}"
+                   class="dashboard-service-card">
+                    <div class="service-icon">🧊</div>
+                    <h3>Refrigerator</h3>
+                    <p>Repair &amp; maintenance</p>
+                </a>
+
+                <!-- CCTV -->
+                <a href="{{ url_for('technicians', service='CCTV') }}"
+                   class="dashboard-service-card">
+                    <div class="service-icon">📹</div>
+                    <h3>CCTV</h3>
+                    <p>Installation &amp; repair</p>
+                </a>
+
+                <!-- COMPUTER & LAPTOP -->
+                <a href="{{ url_for('technicians', service='Computer & Laptop') }}"
+                   class="dashboard-service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Computer &amp; Laptop</h3>
+                    <p>Technical support</p>
+                </a>
+
+                <!-- EMERGENCY SERVICES -->
+                <a href="{{ url_for('technicians', service='Emergency Services') }}"
+                   class="dashboard-service-card emergency-card">
+                    <div class="service-icon">🚨</div>
+                    <h3>Emergency Services</h3>
+                    <p>Roadside &amp; emergency assistance</p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FixNow - Technicians</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+          <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</head>
+
+
+<body class="technician-page">
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="technician-navbar">
+
+        <div class="technician-logo">
+            FIX<span>NOW</span>
+        </div>
+
+        <a href="{{ url_for('dashboard') }}"
+           class="back-service">
+            ← Back to Services
+        </a>
+
+    </nav>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+{% if service != "Emergency Services" %}
+    <section class="technician-header">
+
+        <h1>
+            Choose Your Technician
+        </h1>
+
+        <p>
+            Trusted professionals for {{ service }}
+        </p>
+
+    </section>
+    {% endif %}
+
+
+    <!-- ================= TECHNICIAN LIST ================= -->
+    <section class="technician-list">
+
+
+        {% if service == "AC Repair" %}
+
+
+        <!-- ================= RAHUL ================= -->
+
+        <div class="technician-card-new">
+
+            <div class="technician-image">
+                👨‍🔧
+            </div>
+
+            <div class="technician-info">
+
+                <div class="technician-name-row">
+
+                    <h2>
+                        Rahul Kumar
+                    </h2>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <p class="speciality">
+                    AC Repair Specialist
+                </p>
+
+                <div class="technician-stats">
+
+                    <span>⭐ 4.9</span>
+
+                    <span>
+                        🏆 5 Years Experience
+                    </span>
+
+                    <span>
+                        📍 2.3 km away
+                    </span>
+
+                </div>
+
+                <p class="price">
+                    Starting from
+                    <strong>₹299</strong>
+                </p>
+
+                <div class="verified">
+                    ✓ Verified Professional
+                </div>
+
+            </div>
+
+
+            <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Rahul Kumar') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Rahul Kumar') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= AMIT ================= -->
+
+        <div class="technician-card-new">
+
+            <div class="technician-image">
+                👨‍🔧
+            </div>
+
+            <div class="technician-info">
+
+                <div class="technician-name-row">
+
+                    <h2>
+                        Amit Singh
+                    </h2>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <p class="speciality">
+                    AC Service Expert
+                </p>
+
+                <div class="technician-stats">
+
+                    <span>⭐ 4.8</span>
+
+                    <span>
+                        🏆 4 Years Experience
+                    </span>
+
+                    <span>
+                        📍 3.1 km away
+                    </span>
+
+                </div>
+
+                <p class="price">
+                    Starting from
+                    <strong>₹349</strong>
+                </p>
+
+                <div class="verified">
+                    ✓ Verified Professional
+                </div>
+
+            </div>
+
+
+            <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Amit Singh') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Amit Singh') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= VIKAS ================= -->
+
+        <div class="technician-card-new">
+
+            <div class="technician-image">
+                👨‍🔧
+            </div>
+
+            <div class="technician-info">
+
+                <div class="technician-name-row">
+
+                    <h2>
+                        Vikas Sharma
+                    </h2>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <p class="speciality">
+                    AC Installation Expert
+                </p>
+
+                <div class="technician-stats">
+
+                    <span>⭐ 4.7</span>
+
+                    <span>
+                        🏆 6 Years Experience
+                    </span>
+
+                    <span>
+                        📍 4.0 km away
+                    </span>
+
+                </div>
+
+                <p class="price">
+                    Starting from
+                    <strong>₹399</strong>
+                </p>
+
+                <div class="verified">
+                    ✓ Verified Professional
+                </div>
+
+            </div>
+
+
+            <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Vikas Sharma') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Vikas Sharma') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+        </div>
+
+
+        {% elif service == "Electrician" %}
+
+
+        <!-- ================= ROHIT ================= -->
+
+        <div class="technician-card-new">
+
+            <div class="technician-image">
+                ⚡
+            </div>
+
+            <div class="technician-info">
+
+                <div class="technician-name-row">
+
+                    <h2>
+                        Rohit Verma
+                    </h2>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <p class="speciality">
+                    Electrical Repair Specialist
+                </p>
+
+                <div class="technician-stats">
+
+                    <span>⭐ 4.9</span>
+
+                    <span>
+                        🏆 7 Years Experience
+                    </span>
+
+                    <span>
+                        📍 1.8 km away
+                    </span>
+
+                </div>
+
+                <p class="price">
+                    Starting from
+                    <strong>₹249</strong>
+                </p>
+
+                <div class="verified">
+                    ✓ Verified Professional
+                </div>
+
+            </div>
+
+
+            <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Rohit Verma') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Rohit Verma') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ARJUN ================= -->
+
+        <div class="technician-card-new">
+
+            <div class="technician-image">
+                ⚡
+            </div>
+
+            <div class="technician-info">
+
+                <div class="technician-name-row">
+
+                    <h2>
+                        Arjun Yadav
+                    </h2>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <p class="speciality">
+                    Home Electrical Expert
+                </p>
+
+                <div class="technician-stats">
+
+                    <span>⭐ 4.8</span>
+
+                    <span>
+                        🏆 5 Years Experience
+                    </span>
+
+                    <span>
+                        📍 2.7 km away
+                    </span>
+
+                </div>
+
+                <p class="price">
+                    Starting from
+                    <strong>₹279</strong>
+                </p>
+
+                <div class="verified">
+                    ✓ Verified Professional
+                </div>
+
+            </div>
+
+
+            <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Arjun Yadav') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Arjun Yadav') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= MANISH ================= -->
+
+        <div class="technician-card-new">
+
+            <div class="technician-image">
+                ⚡
+            </div>
+
+            <div class="technician-info">
+
+                <div class="technician-name-row">
+
+                    <h2>
+                        Manish Gupta
+                    </h2>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <p class="speciality">
+                    Electrical Installation Expert
+                </p>
+
+                <div class="technician-stats">
+
+                    <span>⭐ 4.7</span>
+
+                    <span>
+                        🏆 6 Years Experience
+                    </span>
+
+                    <span>
+                        📍 3.4 km away
+                    </span>
+
+                </div>
+
+                <p class="price">
+                    Starting from
+                    <strong>₹299</strong>
+                </p>
+
+                <div class="verified">
+                    ✓ Verified Professional
+                </div>
+
+            </div>
+
+
+            <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Manish Gupta') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Manish Gupta') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+        </div>
+
+
+        {% elif service == "Plumber" %}
+
+
+        <!-- ================= SURESH ================= -->
+
+        <div class="technician-card-new">
+
+            <div class="technician-image">
+                🔧
+            </div>
+
+            <div class="technician-info">
+
+                <div class="technician-name-row">
+
+                    <h2>
+                        Suresh Kumar
+                    </h2>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <p class="speciality">
+                    Plumbing Specialist
+                </p>
+
+                <div class="technician-stats">
+
+                    <span>⭐ 4.9</span>
+
+                    <span>
+                        🏆 8 Years Experience
+                    </span>
+
+                    <span>
+                        📍 2.0 km away
+                    </span>
+
+                </div>
+
+                <p class="price">
+                    Starting from
+                    <strong>₹249</strong>
+                </p>
+
+                <div class="verified">
+                    ✓ Verified Professional
+                </div>
+
+            </div>
+
+
+            <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Suresh Kumar') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Suresh Kumar') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DEEPAK ================= -->
+
+        <div class="technician-card-new">
+
+            <div class="technician-image">
+                🔧
+            </div>
+
+            <div class="technician-info">
+
+                <div class="technician-name-row">
+
+                    <h2>
+                        Deepak Singh
+                    </h2>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <p class="speciality">
+                    Bathroom & Kitchen Expert
+                </p>
+
+                <div class="technician-stats">
+
+                    <span>⭐ 4.8</span>
+
+                    <span>
+                        🏆 5 Years Experience
+                    </span>
+
+                    <span>
+                        📍 3.2 km away
+                    </span>
+
+                </div>
+
+                <p class="price">
+                    Starting from
+                    <strong>₹299</strong>
+                </p>
+
+                <div class="verified">
+                    ✓ Verified Professional
+                </div>
+
+            </div>
+
+
+            <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Deepak Singh') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Deepak Singh') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= RAKESH ================= -->
+
+        <div class="technician-card-new">
+
+            <div class="technician-image">
+                🔧
+            </div>
+
+            <div class="technician-info">
+
+                <div class="technician-name-row">
+
+                    <h2>
+                        Rakesh Mishra
+                    </h2>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <p class="speciality">
+                    Pipe & Leakage Specialist
+                </p>
+
+                <div class="technician-stats">
+
+                    <span>⭐ 4.7</span>
+
+                    <span>
+                        🏆 6 Years Experience
+                    </span>
+
+                    <span>
+                        📍 4.1 km away
+                    </span>
+
+                </div>
+
+                <p class="price">
+                    Starting from
+                    <strong>₹279</strong>
+                </p>
+
+                <div class="verified">
+                    ✓ Verified Professional
+                </div>
+
+            </div>
+
+
+            <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Rakesh Mishra') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Rakesh Mishra') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+        </div>
+         {% elif service == "Washing Machine" %}
+
+
+<!-- ================= ANKIT ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        🧺
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Ankit Sharma
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            Washing Machine Specialist
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.9
+            </span>
+
+            <span>
+                🏆 6 Years Experience
+            </span>
+
+            <span>
+                📍 2.1 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹299
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Ankit Sharma') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Ankit Sharma') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+
+
+<!-- ================= RAVI ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        🧺
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Ravi Kumar
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            Front Load & Top Load Expert
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.8
+            </span>
+
+            <span>
+                🏆 5 Years Experience
+            </span>
+
+            <span>
+                📍 3.4 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹329
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Ravi Kumar') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Ravi Kumar') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+
+
+<!-- ================= MOHIT ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        🧺
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Mohit Verma
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            Washing Machine Repair Expert
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.7
+            </span>
+
+            <span>
+                🏆 7 Years Experience
+            </span>
+
+            <span>
+                📍 4.2 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹349
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Mohit Verma') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Mohit Verma') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+           {% elif service == "Refrigerator" %}
+           <!-- ================= REFRIGERATOR TECHNICIANS ================= -->
+
+
+<!-- ================= AMAN ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        🧊
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Aman Gupta
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            Refrigerator Repair Specialist
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.9
+            </span>
+
+            <span>
+                🏆 6 Years Experience
+            </span>
+
+            <span>
+                📍 1.8 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹299
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Aman Gupta') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Aman Gupta') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+
+
+<!-- ================= ROHIT ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        🧊
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Rohit Singh
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            Fridge Cooling & Compressor Expert
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.8
+            </span>
+
+            <span>
+                🏆 5 Years Experience
+            </span>
+
+            <span>
+                📍 3.2 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹349
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Rohit Singh') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Rohit Singh') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+
+
+<!-- ================= VIVEK ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        🧊
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Vivek Yadav
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            Double Door & Inverter Fridge Expert
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.7
+            </span>
+
+            <span>
+                🏆 7 Years Experience
+            </span>
+
+            <span>
+                📍 4.1 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹399
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Vivek Yadav') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Vivek Yadav') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+{% elif service == "CCTV" %}
+<!-- ================= CCTV TECHNICIANS ================= -->
+
+
+<!-- ================= ARJUN ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        📹
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Arjun Verma
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            CCTV Installation Specialist
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.9
+            </span>
+
+            <span>
+                🏆 6 Years Experience
+            </span>
+
+            <span>
+                📍 2.0 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹399
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Arjun Verma') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Arjun Verma') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+
+
+<!-- ================= NIKHIL ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        📹
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Nikhil Sharma
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            CCTV Camera & Security Expert
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.8
+            </span>
+
+            <span>
+                🏆 5 Years Experience
+            </span>
+
+            <span>
+                📍 3.5 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹449
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Nikhil Sharma') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Nikhil Sharma') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+
+
+<!-- ================= SACHIN ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        📹
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Sachin Kumar
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            CCTV Repair & Maintenance Expert
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.7
+            </span>
+
+            <span>
+                🏆 7 Years Experience
+            </span>
+
+            <span>
+                📍 4.3 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹499
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Sachin Kumar') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Sachin Kumar') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div> 
+{% elif service == "Computer & Laptop" %}
+<!-- ================= COMPUTER & LAPTOP TECHNICIANS ================= -->
+
+
+<!-- ================= RAHUL ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        💻
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Rahul Sharma
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            Laptop & Computer Repair Specialist
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.9
+            </span>
+
+            <span>
+                🏆 6 Years Experience
+            </span>
+
+            <span>
+                📍 1.9 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹299
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Rahul Sharma') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Rahul Sharma') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+
+
+<!-- ================= AMIT ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        💻
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Amit Verma
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            Software & Hardware Expert
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.8
+            </span>
+
+            <span>
+                🏆 5 Years Experience
+            </span>
+
+            <span>
+                📍 3.1 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹349
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Amit Verma') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Amit Verma') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+
+
+<!-- ================= VIVEK ================= -->
+
+<div class="technician-card-new">
+
+    <div class="technician-image">
+        💻
+    </div>
+
+    <div class="technician-info">
+
+        <div class="technician-name-row">
+
+            <h2>
+                Vivek Kumar
+            </h2>
+
+            <span class="available">
+                ● Available
+            </span>
+
+        </div>
+
+        <p class="speciality">
+            Computer Troubleshooting Expert
+        </p>
+
+        <div class="technician-stats">
+
+            <span>
+                ⭐ 4.7
+            </span>
+
+            <span>
+                🏆 7 Years Experience
+            </span>
+
+            <span>
+                📍 4.2 km away
+            </span>
+
+        </div>
+
+        <p class="price">
+
+            Starting from
+
+            <strong>
+                ₹399
+            </strong>
+
+        </p>
+
+        <div class="verified">
+
+            ✓ Verified Professional
+
+        </div>
+
+    </div>
+
+
+    <div class="technician-actions">
+
+                <a href="{{ url_for('profile', technician='Vivek Kumar') }}"
+                   class="profile-btn">
+                    View Profile
+                </a>
+
+                <a href="{{ url_for('booking', technician='Vivek Kumar') }}"
+                   class="select-technician-btn">
+                    Select Technician
+                </a>
+
+            </div>
+
+</div>
+{% elif service == "Emergency Services" %}
+<!-- ================= EMERGENCY CONTROL CENTER ================= -->
+
+<div class="emergency-control"> 
+
+    <div class="emergency-title"> 
+
+        <div class="emergency-title-icon"> 
+            🚨 
+        </div> 
+
+        <div> 
+            <h1>Choose Your Emergency Assistance</h1> 
+
+            <p> 
+                Select the type of roadside assistance you need.
+            </p> 
+        </div> 
+
+    </div>
+
+
+    <!-- ================= LOCATION BOX ================= -->
+
+    <div class="emergency-location">
+
+        <div class="location-left">
+
+            <div class="location-icon">
+                📍
+            </div>
+
+            <div>
+
+                <h3>Your Location</h3>
+
+                <p>
+                    Use your current location to find nearby mechanics.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button type="button"
+                class="use-location-btn"
+                id="useLocationBtn">
+            📍 Use My Location
+
+        </button>
+
+    </div>
+    <!-- Current Location Map -->
+<div id="locationMap"
+     style="height: 350px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 12px;
+            border: 1px solid #ddd;">
+</div>
+<div id="selectedLocationBox" style="margin-top: 15px;">
+    <p id="selectedAddress">Please select your location on the map.</p>
+
+    <button type="button" id="selectLocationBtn">
+        📍 Select This Location
+    </button>
+</div>
+
+
+    <!-- ================= EMERGENCY OPTIONS ================= -->
+
+    <div class="emergency-heading">
+
+        <h2>Select Your Emergency</h2>
+
+        <p>
+            Choose the type of roadside assistance you need.
+        </p>
+
+    </div>
+
+
+    <div class="emergency-option-grid">
+
+
+        <!-- CAR -->
+
+<div class="emergency-option-card">
+
+    <div class="option-icon">
+        🚗
+    </div>
+
+    <div class="option-content">
+
+        <h3>Car Breakdown</h3>
+
+        <p>
+            Get roadside assistance for your car.
+        </p>
+
+        <a href="{{ url_for('emergency_booking', emergency='Car Breakdown') }}"
+           class="emergency-assistance-btn">
+            Get Assistance
+        </a>
+
+    </div>
+
+</div>
+
+        <!-- BIKE -->
+
+        <div class="emergency-option-card">
+
+            <div class="option-icon">
+                🏍️
+            </div>
+
+            <div class="option-content">
+
+                <h3>Bike Breakdown</h3>
+
+                <p>
+                    Quick bike repair assistance.
+                </p>
+
+                <a href="{{ url_for('emergency_booking', emergency='Bike Breakdown') }}"
+                   class="emergency-assistance-btn">
+                    Get Assistance
+                </a>
+
+            </div>
+
+        </div>
+<!-- SCOOTER -->
+
+<div class="emergency-option-card">
+
+    <div class="option-icon">
+        🛵
+    </div>
+
+    <div class="option-content">
+
+        <h3>Scooter Breakdown</h3>
+
+        <p>
+            Get help for your scooter.
+        </p>
+
+        <a href="{{ url_for('emergency_booking', emergency='Scooter Breakdown') }}"
+           class="emergency-assistance-btn">
+            Get Assistance
+        </a>
+
+    </div>
+
+</div>
+
+     <!-- BATTERY -->
+
+<div class="emergency-option-card">
+
+    <div class="option-icon">
+        🔋
+    </div>
+
+    <div class="option-content">
+
+        <h3>Battery / Jump Start</h3>
+
+        <p>
+            Get quick battery assistance.
+        </p>
+
+        <a href="{{ url_for('emergency_booking', emergency='Battery / Jump Start') }}"
+           class="emergency-assistance-btn">
+            Get Assistance
+        </a>
+
+    </div>
+
+</div>
+
+      <!-- PUNCTURE -->
+
+<div class="emergency-option-card">
+
+    <div class="option-icon">
+        🛞
+    </div>
+
+    <div class="option-content">
+
+        <h3>Tyre / Puncture</h3>
+
+        <p>
+            Get tyre repair and puncture help.
+        </p>
+
+        <a href="{{ url_for('emergency_booking', emergency='Tyre / Puncture') }}"
+           class="emergency-assistance-btn">
+            Get Assistance
+        </a>
+
+    </div>
+
+</div>
+<!-- FUEL -->
+
+<div class="emergency-option-card">
+
+    <div class="option-icon">
+        ⛽
+    </div>
+
+    <div class="option-content">
+
+        <h3>Fuel Assistance</h3>
+
+        <p>
+            Get emergency fuel assistance.
+        </p>
+
+        <a href="{{ url_for('emergency_booking', emergency='Fuel Assistance') }}"
+           class="emergency-assistance-btn">
+            Get Assistance
+        </a>
+
+    </div>
+
+</div>
+
+      <!-- MECHANIC -->
+
+<div class="emergency-option-card emergency-mechanic">
+
+    <div class="option-icon">
+        🔧
+    </div>
+
+    <div class="option-content">
+
+        <h3>General Mechanic</h3>
+
+        <p>
+            Get help for other vehicle problems.
+        </p>
+
+        <a href="{{ url_for('emergency_booking', emergency='General Mechanic') }}"
+           class="emergency-assistance-btn">
+            Get Assistance
+        </a>
+
+    </div>
+
+</div>
+    <!-- ================= REQUEST BUTTON ================= -->
+
+    <div class="emergency-action">
+
+    <a href="{{ url_for('emergency_booking', emergency='Emergency Assistance') }}"
+       class="emergency-request-btn">
+
+        🚨 Request Emergency Assistance
+
+    </a>
+
+</div>
+        {% endif %}
+
+
+    </section>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const locationButton = document.getElementById("useLocationBtn");
+    const selectButton = document.getElementById("selectLocationBtn");
+    const selectedAddressElement = document.getElementById("selectedAddress");
+
+    let map = null;
+    let marker = null;
+    let selectedLatitude = null;
+    let selectedLongitude = null;
+    let selectedAddress = "";
+
+    if (!locationButton) return;
+
+    // Get address from selected coordinates
+    async function getAddress(lat, lng) {
+        selectedAddress = "";
+
+        if (selectedAddressElement) {
+            selectedAddressElement.textContent = "Loading address...";
+        }
+
+        try {
+            const response = await fetch(
+                "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" +
+                lat + "&lon=" + lng
+            );
+
+            if (!response.ok) {
+                throw new Error("Address not available");
+            }
+
+            const data = await response.json();
+
+            selectedAddress = data.display_name || "Address not found.";
+
+        } catch (error) {
+            selectedAddress = "";
+        }
+
+        if (selectedAddressElement) {
+            selectedAddressElement.textContent =
+                selectedAddress || "Address load nahi hua. Dobara try karo.";
+        }
+    }
+
+    // Update marker and selected location
+    function updateLocation(lat, lng) {
+        selectedLatitude = lat;
+        selectedLongitude = lng;
+
+        marker.setLatLng([lat, lng]);
+
+        getAddress(lat, lng);
+    }
+
+    // Initialize map
+    function showMap(lat, lng) {
+
+        if (typeof L === "undefined") {
+            alert("Map load nahi hua. Internet check karo.");
+            return;
+        }
+
+        if (!map) {
+            map = L.map("locationMap").setView([lat, lng], 15);
+
+            L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                attribution: "&copy; OpenStreetMap contributors"
+            }).addTo(map);
+
+            marker = L.marker([lat, lng], {
+                draggable: true
+            }).addTo(map);
+
+            // Click anywhere on map to change location
+            map.on("click", function (event) {
+                updateLocation(event.latlng.lat, event.latlng.lng);
+            });
+
+            // Drag marker to change location
+            marker.on("dragend", function (event) {
+                const position = event.target.getLatLng();
+                updateLocation(position.lat, position.lng);
+            });
+
+        } else {
+            map.setView([lat, lng], 15);
+            marker.setLatLng([lat, lng]);
+            map.invalidateSize();
+        }
+
+        marker.bindPopup("📍 Selected Location").openPopup();
+
+        updateLocation(lat, lng);
+    }
+
+    // Use current GPS location
+    locationButton.addEventListener("click", function () {
+
+        if (!navigator.geolocation) {
+            alert("Your browser does not support location.");
+            return;
+        }
+
+        locationButton.disabled = true;
+        locationButton.textContent = "📍 Getting Location...";
+
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+
+                showMap(lat, lng);
+
+                locationButton.disabled = false;
+                locationButton.textContent = "✅ Location Found";
+            },
+
+            function (error) {
+                locationButton.disabled = false;
+                locationButton.textContent = "📍 Use My Location";
+
+                alert(
+                    error.code === 1
+                        ? "Location permission denied. Browser settings mein Allow karo."
+                        : "Location nahi mili. Dobara try karo."
+                );
+            },
+
+            {
+                enableHighAccuracy: true,
+                timeout: 20000,
+                maximumAge: 0
+            }
+        );
+    });
+
+    // Confirm selected location
+    if (selectButton) {
+        selectButton.addEventListener("click", function () {
+
+            if (selectedLatitude === null || selectedLongitude === null) {
+                alert("Pehle Use My Location dabao.");
+                return;
+            }
+
+            if (!selectedAddress) {
+                alert("Address load hone do, phir dobara click karo.");
+                return;
+            }
+
+            if (selectedAddressElement) {
+                selectedAddressElement.textContent =
+                    "✅ Selected Address: " + selectedAddress;
+            }
+
+            alert(
+                "Location Selected!\n\n" +
+                selectedAddress +
+                "\nLatitude: " + selectedLatitude.toFixed(6) +
+                "\nLongitude: " + selectedLongitude.toFixed(6)
+            );
+
+        });
+    }
+
+});
+</script>
+
+</body>
+
+</html>

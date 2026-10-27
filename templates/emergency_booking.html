@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixNow - Emergency Assistance</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="emergency-booking-page">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="booking-navbar">
+
+        <div class="booking-logo">
+            FIX<span>NOW</span>
+        </div>
+
+        <a href="/dashboard" class="booking-back">
+            ← Back to Services
+        </a>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="emergency-booking-container">
+
+        <!-- HEADER -->
+
+        <div class="emergency-booking-header">
+
+            <div class="emergency-booking-icon">
+                🚨
+            </div>
+
+            <h1>Emergency Assistance</h1>
+
+            <p>
+                Tell us what happened and we'll help you as quickly as possible.
+            </p>
+
+        </div>
+
+
+        <!-- ================= BOOKING CARD ================= -->
+
+        <div class="emergency-booking-card">
+
+            <div class="emergency-selected">
+
+                <div class="emergency-selected-icon">
+                    🚗
+                </div>
+
+                <div>
+
+                    <span>Selected Emergency</span>
+
+                    <h2>
+                        {{ emergency }}
+                    </h2>
+
+                    <p>
+                        ⚡ Immediate assistance available
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= FORM ================= -->
+
+            <form action="{{ url_for('confirmation', technician='Emergency Assistance') }}"
+                  method="get">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label>Your Name</label>
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <!-- MOBILE -->
+
+                <div class="form-group">
+    <label for="mobile">Mobile Number *</label>
+    <input
+        type="tel"
+        id="mobile"
+        name="mobile"
+        placeholder="Enter 10-digit mobile number"
+        pattern="[0-9]{10}"
+        minlength="10"
+        maxlength="10"
+        required>
+</div>
+
+                <!-- LOCATION -->
+
+                <div class="form-group">
+    <label for="address">Current Address *</label>
+    <textarea
+        id="address"
+        name="address"
+        rows="3"
+        placeholder="Enter your complete address"
+        required></textarea>
+</div>
+
+                <!-- PROBLEM -->
+
+                <div class="form-group">
+
+                    <label>Describe Your Problem</label>
+
+                    <textarea
+                        name="problem"
+                        rows="4"
+                        placeholder="Tell us what happened..."
+                        required></textarea>
+
+                </div>
+
+
+                <!-- EMERGENCY NOTICE -->
+
+                <div class="emergency-notice">
+
+                    <span>⚡</span>
+
+                    <div>
+
+                        <strong>Emergency Request</strong>
+
+                        <p>
+                            A nearby service professional will be assigned
+                            based on your emergency requirement.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button type="submit"
+                        class="emergency-request-btn">
+
+                    🚨 Request Immediate Assistance
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

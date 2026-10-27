@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixNow - Booking Confirmed</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body class="confirmation-page">
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="confirmation-navbar">
+
+        <div class="confirmation-logo">
+            FIX<span>NOW</span>
+        </div>
+
+        <a href="{{ url_for('dashboard') }}"
+           class="confirmation-home">
+            Home
+        </a>
+
+    </nav>
+
+
+
+    <!-- ================= CONFIRMATION ================= -->
+
+    <main class="confirmation-container">
+
+
+        <!-- SUCCESS ICON -->
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        <h1>
+            Booking Confirmed!
+        </h1>
+
+        <p class="confirmation-message">
+            Your service request has been successfully booked.
+        </p>
+
+
+
+        <!-- ================= BOOKING CARD ================= -->
+
+        <div class="booking-summary">
+
+
+            <div class="booking-summary-header">
+
+                <div>
+                    <span class="summary-label">
+                        BOOKING ID
+                    </span>
+
+                    <h2>
+                            #{{ booking_id }}
+
+                    </h2>
+                </div>
+
+                <span class="booking-status">
+                    Confirmed
+                </span>
+
+            </div>
+
+
+
+            <!-- TECHNICIAN -->
+
+            <div class="summary-section">
+
+                <div class="summary-icon">
+                    👨‍🔧
+                </div>
+
+                <div>
+
+                    <span>
+                        Technician
+                    </span>
+
+                    <strong>
+                        {{ technician }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SERVICE -->
+
+            <div class="summary-section">
+
+                <div class="summary-icon">
+                    🔧
+                </div>
+
+                <div>
+
+                    <span>
+                        Service
+                    </span>
+
+                    <strong>
+                        {{ service }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DATE -->
+
+            <div class="summary-section">
+
+                <div class="summary-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <span>
+                        Date & Time
+                    </span>
+
+                    <strong>
+                         {{ date }} at {{ time }}
+
+                    </strong>
+
+                </div>
+
+            </div>
+            <div class="summary-section">
+
+    <div class="summary-icon">
+        👤
+    </div>
+
+    <div>
+
+        <span>
+            Customer
+        </span>
+
+        <strong>
+            {{ name }}
+        </strong>
+
+    </div>
+
+</div>
+<div class="summary-section">
+
+    <div class="summary-icon">
+        📝
+    </div>
+
+    <div>
+
+        <span>
+            Problem
+        </span>
+
+        <strong>
+            {{ problem }}
+        </strong>
+
+    </div>
+
+</div>
+            <!-- LOCATION -->
+
+            <div class="summary-section">
+
+                <div class="summary-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <span>
+                        Service Location
+                    </span>
+
+                    <strong>
+                        {{ address }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRICE -->
+
+            <div class="summary-price">
+
+                <span>
+                    Estimated Starting Price
+                </span>
+
+                <strong>
+                    ₹299
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= ACTION BUTTONS ================= -->
+
+        <div class="confirmation-actions">
+
+            <a href="{{ url_for('tracking', technician=technician) }}"
+   class="track-technician-btn">
+
+    📍 Track Technician
+
+</a>
+
+
+            <a href="{{ url_for('dashboard') }}"
+               class="back-dashboard-btn">
+
+                ← Back to Dashboard
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

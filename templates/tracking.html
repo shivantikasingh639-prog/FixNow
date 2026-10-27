@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixNow - Track Technician</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Leaflet Real Map CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body class="tracking-page">
+
+    <!-- NAVBAR -->
+    <nav class="tracking-navbar">
+
+        <div class="tracking-logo">
+            FIX<span>NOW</span>
+        </div>
+
+        <a href="{{ url_for('dashboard') }}"
+           class="tracking-home">
+            Home
+        </a>
+
+    </nav>
+
+    <!-- MAIN -->
+    <main class="tracking-container">
+
+        <!-- HEADER -->
+        <div class="tracking-header">
+
+            <div>
+                <h1>Track Your Technician</h1>
+                <p>Your technician is on the way.</p>
+            </div>
+
+            <span class="tracking-status" id="trackingStatus">
+    ⏳ Waiting for technician update
+</span>
+
+        </div>
+
+        <!-- TRACKING AREA -->
+        <div class="tracking-card">
+
+            <!-- REAL MAP -->
+            <div class="map-area" id="trackingMap"></div>
+
+            <!-- TECHNICIAN INFO -->
+            <div class="tracking-info">
+
+                <div class="tracking-technician">
+
+                    <div class="tracking-avatar">
+                        👨‍🔧
+                    </div>
+
+                    <div>
+                        <span>Your Technician</span>
+
+                        <h2>{{ technician }}</h2>
+
+                        <p>
+                            ⭐ 4.9 &nbsp; • &nbsp;
+                            ✓ Verified Professional
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- ETA -->
+                <div class="eta-box">
+
+                    <span>Estimated Arrival</span>
+
+                    <strong id="etaValue">Calculating...</strong>
+
+                </div>
+
+                <!-- DETAILS -->
+                <div class="tracking-details">
+
+                    <div>
+                        <span>📍 Distance</span>
+                        <strong id="distanceValue">Waiting...</strong>
+                    </div>
+
+                    <div>
+                        <span>🚗 Status</span>
+                        <strong id="statusValue">Not confirmed yet</strong>
+                    </div>
+
+                </div>
+
+                <!-- CALL BUTTON -->
+                <button type="button"
+                        class="call-technician-btn"
+                        id="callTechnicianBtn">
+                    📞 Call Technician
+                </button>
+
+                <!-- BACK BUTTON -->
+                <a href="{{ url_for('dashboard') }}"
+                   class="tracking-dashboard-btn">
+                    ← Back to Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Leaflet Real Map JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const mapElement = document.getElementById("trackingMap");
+
+            if (!mapElement || typeof L === "undefined") {
+                console.error("Map element or Leaflet library not found.");
+                return;
+            }
+
+            /*
+             * TEMPORARY DEMO LOCATION: Gorakhpur
+             * This is not your actual location.
+             */
+            const demoLocation = [26.7606, 83.3732];
+
+            const map = L.map("trackingMap").setView(demoLocation, 14);
+
+            // OpenStreetMap tiles
+            L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                maxZoom: 19,
+                attribution: "&copy; OpenStreetMap contributors"
+            }).addTo(map);
+
+            // Temporary demo marker
+            L.marker(demoLocation)
+                .addTo(map)
+                .bindPopup("📍 FixNow Demo Location")
+                .openPopup();
+
+            // Temporary demo information
+            document.getElementById("etaValue").textContent = "15 min";
+            document.getElementById("distanceValue").textContent = "2.3 km";
+
+            // Call button: requires a real technician phone number
+            document.getElementById("callTechnicianBtn").addEventListener("click", function () {
+                alert("Technician phone number has not been connected yet.");
+            });
+
+            // Ensure map displays correctly inside the page
+            setTimeout(function () {
+                map.invalidateSize();
+            }, 300);
+
+        });
+    </script>
+
+</body>
+</html>

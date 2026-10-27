@@ -1,0 +1,17 @@
+technician_id,technician_name,service_name,experience_years,rating,city,availability,data_type
+T001,Aarav Sharma,AC Repair,4,4.6,Lucknow,Available,project_defined_demo
+T002,Priya Verma,Electrician,5,4.8,Lucknow,Available,project_defined_demo
+T003,Rohan Gupta,Plumber,3,4.5,Lucknow,Available,project_defined_demo
+T004,Neha Singh,Washing Machine,6,4.7,Lucknow,Available,project_defined_demo
+T005,Vikram Yadav,Refrigerator,7,4.6,Lucknow,Available,project_defined_demo
+T006,Ananya Mishra,CCTV,4,4.4,Lucknow,Available,project_defined_demo
+T007,Kabir Khan,Computer & Laptop,5,4.7,Lucknow,Available,project_defined_demo
+T008,Pooja Patel,Emergency Services,6,4.8,Lucknow,Available,project_defined_demo
+T009,Rahul Saxena,AC Repair,8,4.9,Lucknow,Available,project_defined_demo
+T010,Meera Joshi,Electrician,2,4.3,Lucknow,Available,project_defined_demo
+T011,Arjun Kumar,Plumber,9,4.8,Lucknow,Available,project_defined_demo
+T012,Sana Ali,Washing Machine,3,4.5,Lucknow,Available,project_defined_demo
+T013,Deepak Mishra,Refrigerator,5,4.6,Lucknow,Available,project_defined_demo
+T014,Isha Tiwari,CCTV,2,4.2,Lucknow,Available,project_defined_demo
+T015,Manish Singh,Computer & Laptop,7,4.9,Lucknow,Available,project_defined_demo
+T016,Kavya Agarwal,Emergency Services,4,4.5,Lucknow,Available,project_defined_demo

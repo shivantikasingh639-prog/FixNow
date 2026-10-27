@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>FixNow - Technician Profile</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="profile-page">
+
+    <!-- NAVBAR -->
+
+    <nav class="profile-navbar">
+
+        <div class="profile-logo">
+            FIX<span>NOW</span>
+        </div>
+
+        <a href="/dashboard" class="back-link">
+            ← Back to Services
+        </a>
+
+    </nav>
+
+
+    <!-- PROFILE -->
+
+    <main class="profile-container">
+
+        <div class="profile-card">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="profile-left">
+
+                <div class="profile-photo">
+                    👨‍🔧
+                </div>
+
+                <span class="profile-available">
+                    ● Available Now
+                </span>
+
+                <h1>{{ technician }}</h1>
+
+                <p class="profile-role">
+                    Professional Technician
+                </p>
+
+                <div class="profile-rating">
+                    ⭐ 4.9
+                    <span>(112 Reviews)</span>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="profile-right">
+
+                <h2>Technician Details</h2>
+
+
+                <div class="profile-details">
+
+                    <div class="detail-box">
+
+                        <span>🏆</span>
+
+                        <div>
+                            <small>Experience</small>
+                            <strong>5+ Years</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>📍</span>
+
+                        <div>
+                            <small>Distance</small>
+                            <strong>2.3 km away</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>🔧</span>
+
+                        <div>
+                            <small>Jobs Completed</small>
+                            <strong>500+</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>💰</span>
+
+                        <div>
+                            <small>Starting Price</small>
+                            <strong>₹299</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <h3>About Technician</h3>
+
+                <p class="about-technician">
+                    Experienced and verified professional providing
+                    reliable repair and maintenance services.
+                    Focused on quality work, quick response and
+                    customer satisfaction.
+                </p>
+
+
+                <div class="verified-profile">
+                    ✓ Verified FixNow Professional
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
