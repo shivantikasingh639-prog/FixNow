@@ -1,10 +1,8 @@
-service_id,service_name,category,description,base_price,city
-S001,Plumber,Home Repair,Tap leakage and pipe repair,199,Gorakhpur
-S002,Electrician,Home Repair,Wiring and electrical appliance repair,249,Gorakhpur
-S003,AC Repair,Appliance Repair,AC servicing and cooling problems,499,Gorakhpur
-S004,Refrigerator Repair,Appliance Repair,Fridge cooling and compressor repair,399,Gorakhpur
-S005,Washing Machine Repair,Appliance Repair,Washing machine repair and servicing,349,Gorakhpur
-S006,CCTV Installation,Installation,CCTV camera installation and repair,599,Gorakhpur
-S007,Computer Repair,Technical Support,Desktop and laptop troubleshooting,299,Gorakhpur
-S008,Car Mechanic,Emergency Vehicle Repair,Car breakdown and repair assistance,499,Gorakhpur
-S009,Bike Mechanic,Emergency Vehicle Repair,Bike breakdown and repair assistance,299,Gorakhpur
+﻿service_id,service_name,category,description,starting_price_inr,city
+S001,AC Repair,Home Appliance Repair,"AC servicing, cooling issues and installation",299,Gorakhpur
+S002,Electrician,Home Electrical Services,"Electrical repairs, wiring and installations",249,Gorakhpur
+S003,Plumber,Home Plumbing Services,"Tap, pipe, leakage, bathroom and kitchen repairs",249,Gorakhpur
+S004,Washing Machine,Home Appliance Repair,Washing machine inspection and repair,299,Gorakhpur
+S005,Refrigerator,Home Appliance Repair,"Fridge cooling, compressor and general repairs",299,Gorakhpur
+S006,CCTV,Security & Installation,"CCTV camera installation, repair and maintenance",399,Gorakhpur
+S007,Computer & Laptop,Computer Services,Laptop and desktop hardware/software support,299,Gorakhpur

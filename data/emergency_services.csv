@@ -1,0 +1,8 @@
+﻿emergency_id,emergency_name,category,description,active
+E001,Car Breakdown,Vehicle Emergency,Assistance for a car that has stopped working,Yes
+E002,Bike Breakdown,Vehicle Emergency,Assistance for a motorcycle breakdown,Yes
+E003,Scooter Breakdown,Vehicle Emergency,Assistance for a scooter breakdown,Yes
+E004,Battery / Jump Start,Vehicle Emergency,Battery check and jump-start assistance,Yes
+E005,Tyre / Puncture,Vehicle Emergency,Tyre puncture and tyre-related roadside help,Yes
+E006,Fuel Assistance,Vehicle Emergency,Emergency fuel delivery assistance,Yes
+E007,General Mechanic,Vehicle Emergency,General roadside mechanical assistance,Yes

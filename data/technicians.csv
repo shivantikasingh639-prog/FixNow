@@ -1,16 +1,22 @@
-technician_id,name,service_name,experience,rating,availability,city,contact
-T001,Rahul Sharma,Plumber,5,4.8,Available,Gorakhpur,9876500001
-T002,Amit Verma,Electrician,7,4.7,Available,Gorakhpur,9876500002
-T003,Sandeep Kumar,AC Repair,6,4.6,Available,Gorakhpur,9876500003
-T004,Ankit Singh,Plumber,4,4.5,Unavailable,Gorakhpur,9876500004
-T005,Rohit Mishra,Electrician,8,4.9,Available,Gorakhpur,9876500005
-T006,Vikas Yadav,Refrigerator Repair,5,4.4,Available,Gorakhpur,9876500006
-T007,Deepak Gupta,Washing Machine Repair,6,4.7,Available,Gorakhpur,9876500007
-T008,Manish Pandey,AC Repair,9,4.9,Available,Gorakhpur,9876500008
-T009,Arun Kumar,CCTV Installation,3,4.3,Available,Gorakhpur,9876500009
-T010,Varun Singh,Computer Repair,4,4.6,Unavailable,Gorakhpur,9876500010
-T011,Ajay Verma,Plumber,8,4.8,Available,Gorakhpur,9876500011
-T012,Sunil Kumar,Electrician,5,4.5,Available,Gorakhpur,9876500012
-T013,Rajesh Sharma,AC Repair,7,4.7,Available,Gorakhpur,9876500013
-T014,Mohit Gupta,Refrigerator Repair,4,4.4,Available,Gorakhpur,9876500014
-T015,Pradeep Singh,Washing Machine Repair,6,4.8,Available,Gorakhpur,9876500015
+﻿technician_id,name,service_name,speciality,experience_years,rating,distance_km,price_inr,availability,verified,city,contact
+T001,Rahul Kumar,AC Repair,AC Repair Specialist,5,4.9,2.3,299,Available,Yes,Gorakhpur,
+T002,Amit Singh,AC Repair,AC Service Expert,4,4.8,3.1,349,Available,Yes,Gorakhpur,
+T003,Vikas Sharma,AC Repair,AC Installation Expert,6,4.7,4.0,399,Available,Yes,Gorakhpur,
+T004,Rohit Verma,Electrician,Electrical Repair Specialist,7,4.9,1.8,249,Available,Yes,Gorakhpur,
+T005,Arjun Yadav,Electrician,Home Electrical Expert,5,4.8,2.7,279,Available,Yes,Gorakhpur,
+T006,Manish Gupta,Electrician,Electrical Installation Expert,6,4.7,3.4,299,Available,Yes,Gorakhpur,
+T007,Suresh Kumar,Plumber,Plumbing Specialist,8,4.9,2.0,249,Available,Yes,Gorakhpur,
+T008,Deepak Singh,Plumber,Bathroom & Kitchen Expert,5,4.8,3.2,299,Available,Yes,Gorakhpur,
+T009,Rakesh Mishra,Plumber,Pipe & Leakage Specialist,6,4.7,4.1,279,Available,Yes,Gorakhpur,
+T010,Ankit Sharma,Washing Machine,Washing Machine Specialist,6,4.9,2.1,299,Available,Yes,Gorakhpur,
+T011,Ravi Kumar,Washing Machine,Front Load & Top Load Expert,5,4.8,3.4,329,Available,Yes,Gorakhpur,
+T012,Mohit Verma,Washing Machine,Washing Machine Repair Expert,7,4.7,4.2,349,Available,Yes,Gorakhpur,
+T013,Aman Gupta,Refrigerator,Refrigerator Repair Specialist,6,4.9,1.8,299,Available,Yes,Gorakhpur,
+T014,Rohit Singh,Refrigerator,Fridge Cooling & Compressor Expert,5,4.8,3.2,349,Available,Yes,Gorakhpur,
+T015,Vivek Yadav,Refrigerator,Double Door & Inverter Fridge Expert,7,4.7,4.1,399,Available,Yes,Gorakhpur,
+T016,Arjun Verma,CCTV,CCTV Installation Specialist,6,4.9,2.0,399,Available,Yes,Gorakhpur,
+T017,Nikhil Sharma,CCTV,CCTV Camera & Security Expert,5,4.8,3.5,449,Available,Yes,Gorakhpur,
+T018,Sachin Kumar,CCTV,CCTV Repair & Maintenance Expert,7,4.7,4.3,499,Available,Yes,Gorakhpur,
+T019,Rahul Sharma,Computer & Laptop,Laptop & Computer Repair Specialist,6,4.9,1.9,299,Available,Yes,Gorakhpur,
+T020,Amit Verma,Computer & Laptop,Software & Hardware Expert,5,4.8,3.1,349,Available,Yes,Gorakhpur,
+T021,Vivek Kumar,Computer & Laptop,Computer Troubleshooting Expert,7,4.7,4.2,399,Available,Yes,Gorakhpur,
