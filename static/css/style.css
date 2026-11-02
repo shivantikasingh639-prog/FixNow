@@ -3876,4 +3876,24 @@ body.booking-page {
     background: #e9eef4;
     border-radius: 12px;
     z-index: 1;
+}/* LOGIN ERROR AND SUCCESS MESSAGES */
+
+.login-alert {
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.login-alert.error {
+    background: #ffe5e5;
+    color: #c62828;
+    border: 1px solid #ffcaca;
+}
+
+.login-alert.success {
+    background: #e5f7eb;
+    color: #187b3d;
+    border: 1px solid #b9e7c8;
 }
