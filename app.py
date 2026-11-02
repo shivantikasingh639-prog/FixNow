@@ -200,10 +200,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-# ================= DASHBOARD =================
-
-# ================= DASHBOARD =================
-
+# ================= DASHBOARD ============
 @app.route("/dashboard")
 def dashboard():
 
@@ -215,18 +212,44 @@ def dashboard():
         "dashboard.html",
         user_name=session.get("user_name", "User")
     )
-
 # ================= TECHNICIANS =================
-
 @app.route("/technicians/<service>")
 def technicians(service):
 
     if "user_id" not in session:
         return redirect(url_for("login"))
 
-    return render_template("technicians.html", service=service)
+    # Load technician data from CSV
+    csv_path = Path(app.root_path) / "data" / "technicians.csv"
 
+    technicians_list = []
 
+    if csv_path.exists():
+        try:
+            df = pd.read_csv(csv_path)
+            df.columns = df.columns.str.strip()
+
+            if "service_name" in df.columns:
+                df["service_name"] = df["service_name"].fillna("").astype(str).str.strip()
+
+                selected_service = service.replace("-", " ").strip().casefold()
+
+                filtered_df = df[
+                    df["service_name"].str.casefold() == selected_service
+                ]
+
+                technicians_list = filtered_df.fillna("").to_dict(
+                    orient="records"
+                )
+
+        except (OSError, ValueError, pd.errors.ParserError):
+            app.logger.exception("Could not read technicians.csv")
+
+    return render_template(
+        "technicians.html",
+        service=service,
+        technicians=technicians_list
+    )
 # ================= TECHNICIAN PROFILE =================
 
 @app.route("/profile/<technician>")
@@ -237,11 +260,7 @@ def profile(technician):
 
     return render_template("profile.html", technician=technician)
 
-
 # ================= BOOKING =================
-
-# ================= BOOKING =================
-
 @app.route("/booking/<technician>")
 def booking(technician):
 
